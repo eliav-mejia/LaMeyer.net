@@ -91,7 +91,7 @@ const layout = ({ children }) => {
         <a href="/" className="block"> 
             <img 
                src="https://raw.githubusercontent.com/cypher-the-meyer/themeyer.eu/main/themeyerlogo" 
-              alt="LaMeyer Logo" 
+              alt="Lameyer Logo" 
               className="h-10 md:h-12 w-auto object-contain" 
             />
         </a>
