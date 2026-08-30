@@ -81,7 +81,7 @@
         const { useState, useEffect, useLayoutEffect, useRef } = React;
 
         // --- LAYOUT COMPONENT ---
-        const Layout = ({ children }) => {
+        const layout = ({ children }) => {
             const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
             const toggleMenu = () => {
@@ -125,7 +125,7 @@
                     {/* Navigation */}
                     <nav className={`fixed left-0 w-full z-[70] px-6 md:px-8 py-4 flex justify-between items-center glass shadow-sm transition-all top-[40px] ${isMobileMenuOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
                         <a href="https://lameyer.net" className="block z-50">
-                            <img src="https://raw.githubusercontent.com/cypher-the-meyer/themeyer.eu/main/themeyerlogo" alt="The Meyer Logo" className="h-10 md:h-12 w-auto object-contain" />
+                            <img src="https://raw.githubusercontent.com/cypher-the-meyer/themeyer.eu/main/themeyerlogo" alt="Lameyer Logo" className="h-10 md:h-12 w-auto object-contain" />
                         </a>
                         
                         {/* Desktop Links */}
@@ -218,7 +218,7 @@
             const pathRef = useRef(null);
             const containerRef = useRef(null);
 
-            useLayoutEffect(() => {
+            uselayoutEffect(() => {
                 if (pathRef.current) {
                     setPathLength(pathRef.current.getTotalLength());
                 }
@@ -378,7 +378,7 @@
             }, []);
 
             return (
-                <Layout>
+                <layout>
                     <section className="min-h-[80vh] flex flex-col items-center justify-center px-4 text-center relative overflow-hidden">
                         <div id="hero-content" className="relative z-10">
                             <div className="inline-block mb-8 px-5 py-1.5 border border-blue-200 text-blue-600 text-[10px] font-bold rounded-full tracking-[0.5em] uppercase bg-blue-50/50">
@@ -454,7 +454,7 @@
         </div>
     </div>
                     </section>
-                </Layout>
+                </layout>
             );
         };
 
